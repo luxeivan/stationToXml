@@ -1,8 +1,9 @@
 const { toXML } = require('jstoxml')
 const axios = require('axios')
 const fs = require('fs')
+require('dotenv').config()
 
-const addressServer = 'https://nopowersupply.mosoblenergo.ru/station'
+const addressServer = process.env.ADDRESS_SERVER || 'http://localhost:4000'
 
 
 const getStantions = async () => {
@@ -128,5 +129,5 @@ getStantions().then((list) => {
     }))
     );
     // console.log(`<?xml version="1.0" encoding="UTF-8"?><companies>` + text + `</companies>`)
-    fs.writeFileSync("forYandex.xml", `<?xml version="1.0" encoding="UTF-8"?><companies>` + text + `</companies>`)
+    fs.writeFileSync("./public/forYandex.xml", `<?xml version="1.0" encoding="UTF-8"?><companies>` + text + `</companies>`)
 })
