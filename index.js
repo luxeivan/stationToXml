@@ -38,7 +38,7 @@ getStantions().then((list) => {
                 },
                 {
                     _name: "name",
-                    _content: "Электрическая Заправочная Станция",
+                    _content: "Электрическая Зарядная Станция",
                     _attrs: {
                         lang: 'ru'
                     }
