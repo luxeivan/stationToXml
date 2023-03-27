@@ -37,7 +37,26 @@ getStantions().then((list) => {
                     }
                 },
                 {
+                    _name: "actualization-date",
+                    _content: Math.floor(new Date().getTime() / 1000),
+                    _attrs: {
+                    }
+                },
+                {
+                    _name: "rubric-id",
+                    _content: '43752131937',
+                    _attrs: {
+                    }
+                },
+                {
                     _name: "name",
+                    _content: "МОСОБЛЭНЕРГО",
+                    _attrs: {
+                        lang: 'ru'
+                    }
+                },
+                {
+                    _name: "name-other",
                     _content: "Электрическая Заправочная Станция",
                     _attrs: {
                         lang: 'ru'
@@ -58,6 +77,13 @@ getStantions().then((list) => {
                     }
                 },
                 {
+                    _name: "address-add",
+                    _content: item.attributes.address_clarification,
+                    _attrs: {
+                        lang: 'ru'
+                    }
+                },
+                {
                     _name: "country",
                     _content: "Россия",
                     _attrs: {
@@ -72,7 +98,13 @@ getStantions().then((list) => {
                 },
                 {
                     _name: "url",
-                    _content: "https://mosoblenergo.ru/chargingStations",
+                    _content: "https://mosoblenergo.ru",
+                    _attrs: {
+                    }
+                },
+                {
+                    _name: "info-page",
+                    _content: "https://mosoblenergo.ru/chargingstations",
                     _attrs: {
                     }
                 },
